@@ -1,7 +1,7 @@
 Description: Trello Sing Up;
 
 Scenario: Tello Sing Up New User
-Given I am on the main application page
+Given I am on a page with the URL 'https://trello.com/'
 
 When I click on an element by the xpath '//a[@data-analytics-button="whiteSignupHeroButton"]'
 When I enter `<userEmail>` in field located `By.xpath(//*[@id='email'])`
