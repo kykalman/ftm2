@@ -5,7 +5,7 @@ Given I am on the main application page
 When I enter ${UserEmail1} and ${UserPass1} on login form
 When I wait until an element with the tag 'img' and attribute 'alt'='My Profile' appears
 When I click on an element with the attribute 'alt'='My Profile'
-When I COMPARE_AGAINST baseline with `userProfile`
+When I ESTABLISH baseline with `userProfile`
 
 Scenario:  Visit Site page visual check
 Given I am on the main application page
@@ -16,14 +16,11 @@ When I COMPARE_AGAINST baseline with `visitSite` ignoring:
 |By.xpath(//article[@data-post-id="9"]/div/div[@class="entry-meta"])|By.cssSelector(#colophon)|
 
 
-Scenario:  Hosting Configuration page visual check
+Scenario:  Upgrades page visual check
 Given I am on the main application page
-When I click on an element with the text 'Manage'
-When I click on an element with the attribute 'data-e2e-sidebar'='Hosting Configuration'
-When I wait until an element with the tag 'h1' and attribute 'class'='formatted-header__title wp-brand-font' appears
-When I COMPARE_AGAINST baseline with `hostingConfiguration` ignoring:
-|ELEMENT|
-|By.xpath(//div[@class='card support-card'])|
+When I click on an element by the xpath '//*[@id="secondary"]/div/ul/li[4]/ul/li[1]/h2/span[2]'
+When I COMPARE_AGAINST baseline with `hostingConfiguration`
+
 
 Scenario:  Name your site page visual check
 Given I am on the main application page

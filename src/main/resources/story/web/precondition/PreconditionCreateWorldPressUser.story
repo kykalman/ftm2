@@ -1,6 +1,6 @@
-Description: Create New User for World press;
+Description: Create New User for Wordpress;
 					 
-Scenario:  Create New User for World press
+Scenario:  Create New User for Wordpress
 Given I am on the main application page
 
 When I click on an element by the xpath '//a[@class="x-nav-link x-nav-link--primary x-link"]'
